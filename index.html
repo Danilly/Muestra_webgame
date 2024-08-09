@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Las Lilis Game</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Sublime Stunning free HTML5/CSS3 website template"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox-thumbs.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox-buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/juegos.css">
+
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/fancybox.js"></script>
+    <script type="text/javascript" src="js/fancybox-buttons.js"></script>
+    <script type="text/javascript" src="js/fancybox-media.js"></script>
+    <script type="text/javascript" src="js/fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script>
+				// transactionLogsCore.isValidString = function(str) {
+				//     var regExp = /([*+?^${}><\[\]\/\\])/g;
+				//     return (str.match(regExp)) ? false : true
+				// }
+
+				function validar(obj)
+				{
+						var nombre = obj.nombre.value;
+						var apellido = obj.apellido.value;
+						var telefono = obj.telefono.value;
+						var email = obj.email.value;
+
+						// El nombre y el apellido no pueden estar vacíos
+						if (nombre == "") {
+								alert("El nombre no puede estar vacio"); return false;
+						} else if (apellido == "") {
+								alert("El apellido no puede estar vacio"); return false; //podemos poner el alert con una condicion
+						}
+
+						// Validacion de nombre y apellido
+						var regNombreApellido = /([0-9*+?^${}><\[\]\/\\])/g;
+						if (regNombreApellido.test(nombre)) {
+								alert("No se permiten número ni caracteres especiales en el campo Nombre"); return false;
+						}
+						if (regNombreApellido.test(apellido)) {
+								alert("No se permiten número ni caracteres especiales en el campo Apellido"); return false;
+						}
+
+						// Se valida el telefono
+						var regTelefono = /([0-9]{9})$/;
+						if (regTelefono.test(telefono) == false) {
+								alert("Solo se admiten números hasta 9 dígitos en el telefono"); return false;
+						}
+
+						var regEmail = /^(.+\@.+\..+)$/;
+						if (regEmail.test(email) == false) {
+								alert("Debes ingresar un email válido"); return false;
+						}
+				}
+		</script>
+</head>
+<body>
+
+	<section class="billboard light">
+		<header class="wrapper light">
+			<a href="#"><img class="logo" src="img/logo2.png" alt=""/></a>
+			<nav>
+				<ul>
+          <li><a href="">Inicio</a></li>
+					<li><a href="">Nosotros</a></li>
+					<li><a href="">Productos</a></li>
+					<li><a href="index.html#soporte">Soporte</a></li>
+					<li>
+
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Contáctenos
+						   <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+							  <li><a href="#"><strong>Atención al Cliente</strong></a></li>
+								<li><a href="#"><strong>Miscelaneos</strong></a></li>
+                <li><a href="#"><strong>Dirección</strong></a></li>
+							</ul>
+						</div>
+          </li>
+				</ul>
+			</nav>
+
+		</header>
+
+
+
+		<div class="caption light animated wow fadeInDown clearfix">
+			<h1>Explore los sistemas de juegos</h1>
+			<p>Disfruta del multijugador en línea y más con Danilly Plays Online</p>
+			<hr>
+		</div>
+		<div class="shadow"></div>
+	</section><!--  fin billboard  -->
+
+	<div class="demo-wrapper">
+		<section class="services wrapper">
+			<div class="without-blending-mode">
+				<h1 class="title">
+					<span>J</span><span>u</span><span>e</span><span>g</span><span>o</span><span>s</span>
+				</h1>
+			</div>
+			<ul class="clearfix">
+				<li class="animated wow fadeInDown">
+					<img class="icon" src="img/icon1.png" alt=""/>
+					<span class="separator"></span><!--  fin fusión  -->
+
+					<h2>Novedades</h2>
+					<p>Nuevo sistema de consola anclado con el Danyreloj.</p>
+				</li>
+				<li class="animated wow fadeInDown"  data-wow-delay=".2s">
+					<img class="icon" src="img/icon2.png" alt=""/>
+					<span class="separator"></span>
+					<h2>Trending de Consolas</h2>
+					<p>Diversos modelos hasta el novedoso Danyreloj obteniendo una muy alta receptividad y el más popular.</p>
+				</li>
+				<li class="animated wow fadeInDown"  data-wow-delay=".4s">
+					<img class="icon" src="img/icon3.png" alt=""/>
+					<span class="separator"></span>
+					<h2>Juegos mas Buscados</h2>
+					<p>Pokémon Maths-Luigis Castle-Soniland-Chrash Return-Learning to program with Mario.</p>
+				</li>
+			</ul>
+		</section><!--  fin servicios  -->
+	</div>
+
+	<section class="blog_posts">
+		<div class="wrapper">
+			<div class="title animated wow fadeIn">
+
+				<h2>Publicaciones Recientes</h2>
+				<h3>Las Publicaciones más Recientes de Nuestra Web</h3>
+				<hr class="separator"/>
+			</div>
+
+			<ul class="clearfix">
+				<li class="animated wow fadeInDown">
+					<div class="media">
+						<div class="date">
+							<span class="day">20</span>
+							<span class="month">Ago</span>
+						</div>
+						<a href="#">
+							<img src="img/luigi.png" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>Diversión con Luigi.</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".2s">
+					<div class="media">
+						<div class="date">
+							<span class="day">21</span>
+							<span class="month">Sep</span>
+						</div>
+						<a href="#">
+							<img src="img/mario.png" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>Nuevas Aventuras cada día con Mario.</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".4s">
+					<div class="media">
+						<div class="date">
+							<span class="day">18</span>
+							<span class="month">Oct</span>
+						</div>
+						<a href="#">
+							<img src="img/pokemon.png" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>Nuevos caminos por recorrer.</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".6s">
+					<div class="media">
+						<div class="date">
+							<span class="day">15</span>
+							<span class="month">Nov</span>
+						</div>
+						<a href="#">
+							<img src="img/soni.png" alt=""/>
+						</a>
+					</div>
+					<a href="#"><h1>Un mundo lleno de imaginación con Soni.</h1>
+				</a>
+				</li>
+			</ul>
+		</div>
+	</section><!--  fin blog_posts  -->
+
+	<section id="soporte">
+
+		<div class="wrapper">
+
+			<form name="frm" id="frm" method="post" action="registro.php" onSubmit="return validar(this)">
+					<label>Nombre:</label>
+					<input type="text" name="nombre" id="nombre">
+					<br><br>
+
+					<label>Apellido:</label>
+					<input type="text" name="apellido" id="apellido">
+					<br><br>
+
+					<label>Telefono:</label>
+					<input type="text" name="telefono" id="telefono">
+					<br><br>
+
+					<label>E-mail</label>
+					<input type="text" name="email" id="email">
+					<br><br>
+
+					<textarea name="comentarios" rows="10" cols="40">Escribe aquí en qué podemos ayudarte</textarea>
+
+					<button type="submit">Guardar</button><!--  fin formulario -->
+			</form>
+
+</div>
+</section>
+
+
+
+
+	<footer>
+		<div class="wrapper">
+			<div class="rights">
+				<img src="img/footer_logo.png" alt="" class="footer_logo"/>
+				<p>© Las Lilis. All Rights Reserved 2018. Sitio Web realizado por Lilly D. Guevara López C.I. 19466119-Programación V</p>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Productos</a></li>
+					<li><a href="#">Soporte</a></li>
+					<li><a href="#">Contáctenos</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer><!--  fin footer  -->
+    <script src='../ga.js'></script>
+</body>
+</html>

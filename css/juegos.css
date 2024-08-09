@@ -1,0 +1,51 @@
+
+.warning {
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	padding: 15px;
+	border-radius: 3px;
+	margin-bottom: 30px;
+}
+.demo-wrapper {
+	width: 90%;
+	margin: 50px auto;
+}
+.demo-wrapper .title {
+	height: 124px;
+	font-size: 120px;
+	font-family: "Montserrat";
+	letter-spacing: -25px;
+	padding: 51px 0 0 0;;
+	margin: 10px;
+	line-height: 0;
+}
+
+.demo-wrapper .without-blending-mode span {
+	 opacity: 0.8;
+
+}
+.demo-wrapper .with-blending-mode span {
+	 mix-blend-mode: multiply;
+}
+.demo-wrapper span:first-child {
+	color: #4285f4;
+	z-index: 100;
+}
+.demo-wrapper span:nth-child(2) {
+	color: #db4437;
+}
+.demo-wrapper span:nth-child(3) {
+	color: #f4b400;
+}
+.demo-wrapper span:nth-child(4) {
+	color: #4285f4;
+	position: relative;
+	z-index: 100;
+}
+.demo-wrapper span:nth-child(5) {
+	color: #0f9d58;
+}
+.demo-wrapper span:nth-child(6) {
+	color: #db4437;
+}
